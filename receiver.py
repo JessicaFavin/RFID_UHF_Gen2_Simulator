@@ -1,11 +1,14 @@
 #!/usr/bin/env python
+import logging
+from collision_management import Collision_management
 
 class Receiver:
-    def __init__(self, f):
-        """initialise the receiver to the given frequency"""
-        self.frequency = f
-        pass
+	def __init__(self, f):
+		self.logger = logging.getLogger(__name__)
+		self.frequency = f
+		self.collision = Collision_management()
+		pass
 
-    def receiveMessage(msg):
-        """receives a message for a tag? to the right frequency """
-        pass
+	'''retrourne une autre liste'''
+	def receiveMessage(self, tags):
+		return self.collision.scramble_tags(tags) 
