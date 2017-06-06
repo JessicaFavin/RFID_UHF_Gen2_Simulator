@@ -28,7 +28,7 @@ class Tag:
 			self.hash = hash
 		self.memory = []
 		self.active = False
-		self.logger.debug('New Tag : id: '+ str(self.id)+' hash: ['+ str(self.hash) + '] active: '+ str(self.active))
+		'''self.logger.debug('New Tag : id: '+ str(self.id)+' hash: ['+ str(self.hash) + ']')'''
 		'''self.logger.debug(''.join(self.hexStringToByteArray(self.id)))'''
 
 

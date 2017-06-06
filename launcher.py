@@ -18,6 +18,11 @@ if __name__ == '__main__':
     for i in range(1,11):
     	tags.append(Tag())
     logger.info("10 tags générés")
+    i = 0
+    print("-------TAGS GENERATED------")
+    for tag in tags:
+        logger.debug("TAG "+ str(i)+" : 	id :"+ tag.id)
+        i+=1
 
     usrp.setTags(tags)
     logger.info("Tags set in URSP")

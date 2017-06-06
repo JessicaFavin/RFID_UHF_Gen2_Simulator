@@ -18,7 +18,7 @@ class USRP:
 		self.logger.info("Computer is set")
 
 	def send(self, msg):
-		self.logger.info("Look for tags begining with : "+ msg)
+		self.logger.info("Look for tags beginning with : "+ msg)
 		response = self.emitter.sendMessage(msg)
 		return self.receiver.receiveMessage(response)
 
